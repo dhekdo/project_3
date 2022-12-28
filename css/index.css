@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'SUIT-Regular';
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul, ol, li {
+    list-style: none;
+}
+
+
+/* 상단 */
+
+.top {
+    width: 100%;
+}
+.top header {
+    width: 100%;
+    position: absolute;
+    top: 3.2%;
+}
+.top header nav {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.top header nav .logo a span  {
+    font-size: 3.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+.top header nav .mainMenu {
+    width: 1.5vw;
+}
+.top header nav .mainMenu .eye {
+    display: flex;
+}
+.top header nav .mainMenu .eye span {
+    width: 0.2vw;
+    height: 0.5vw;
+    color: #fff;
+}
+.top header nav .mainMenu .mouse span {
+    width: 1.5vw;
+    height: 0.1vw;
+    color: #fff;
+}
+.top .mainBg {
+    width: 100%;
+}
+.top .mainBg img {
+    width: 100%;
+}
+.top .mainBg .mainBg_off {
+    position: relative;
+}
+.top .mainBg .mainBg_off > div {
+    width: 1.2vw;
+    height: 24vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%,0);
+    animation: upDown 1s linear 0s infinite alternate;
+    z-index: 100;
+}
+.top .mainBg .mainBg_on {
+    display: none;
+}
+
+.bgOff {
+    opacity: 0%;
+    transition: all 2s;
+}
+@keyframes upDown {
+    0% {
+        top: 0;
+    }
+    100%{
+        top: -2%;
+    }
+}
