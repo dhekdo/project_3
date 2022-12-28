@@ -35,6 +35,7 @@ ul, ol, li {
     width: 100%;
     position: absolute;
     top: 3.2%;
+    z-index: 50;
 }
 .top header nav {
     width: 92%;
@@ -66,12 +67,14 @@ ul, ol, li {
 }
 .top .mainBg {
     width: 100%;
+    overflow: hidden;
 }
 .top .mainBg img {
     width: 100%;
 }
 .top .mainBg .mainBg_off {
     position: relative;
+    z-index: 51;
 }
 .top .mainBg .mainBg_off > div {
     width: 1.2vw;
@@ -86,11 +89,13 @@ ul, ol, li {
 }
 .top .mainBg .mainBg_on {
     display: none;
+    position: absolute;
+    top: 0;
 }
 
 .bgOff {
     opacity: 0%;
-    transition: all 2s;
+    transition: all 1.8s;
 }
 @keyframes upDown {
     0% {
