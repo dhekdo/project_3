@@ -42,6 +42,7 @@ ul, ol, li {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .top header nav .logo a span  {
     font-size: 3.5vw;
@@ -50,21 +51,34 @@ ul, ol, li {
     color: #fff;
 }
 .top header nav .mainMenu {
-    width: 1.5vw;
+    width: 2vw;
+    height: 3vw;
     z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
 }
 .top header nav .mainMenu .eye {
     display: flex;
+    justify-content: space-around;
 }
 .top header nav .mainMenu .eye span {
-    width: 0.2vw;
-    height: 0.5vw;
-    color: #fff;
+    width: 0.35vw;
+    height: 0.6vw;
+    background-color: #fff;
+}
+.top header nav .mainMenu .mouse {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0.9vw;
 }
 .top header nav .mainMenu .mouse span {
-    width: 1.5vw;
-    height: 0.1vw;
-    color: #fff;
+    width: 2vw;
+    height: 0.15vw;
+    background-color: #fff;
 }
 .top .mainBg {
     width: 100%;
@@ -165,6 +179,7 @@ ul, ol, li {
     display: none;
     text-align: center;
     color: #fff;
+    animation: tooltip 1.3s linear 0s infinite alternate;
 }
 .top .mainBg .mainBg_on .stand .tool_text div:first-child {
     position: relative;
@@ -246,6 +261,7 @@ ul, ol, li {
     height: 10.5vw;
     opacity: 0.9;
     display: none;
+    animation: tooltip 1.3s linear 0s infinite alternate;
 }
 .top .mainBg .mainBg_on .projector .tool_text2 .pr_on_tool {
     position: relative;
@@ -284,6 +300,7 @@ ul, ol, li {
     height: 7.7vw;
     opacity: 0.9;
     display: none;
+    animation: tooltip 1.3s linear 0s infinite alternate;
 }
 .top .mainBg .mainBg_on .cosmetics .tool_text3 .cos_on {
     position: relative;
@@ -302,4 +319,58 @@ ul, ol, li {
 .top .mainBg .mainBg_on .cosmetics .tool_text3 div:nth-child(2) span {
     font-size: 0.9vw;
     color: #fff;
+}
+
+.scroll_icon {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    width: 10vw;
+    transform: translate(-50%,0);
+    text-align: center;
+}
+.scroll_icon span {
+    font-size: 0.6vw;
+    color: #fff;
+    font-weight: 600;
+}
+.scroll_icon .scroll_line::after {
+    content: "";
+    width: 0.05vw;
+    height: 3vw;
+    display: block;
+    background-color: #fff;
+    margin: 3% auto;
+}
+.scroll_icon .scroll_circle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.scroll_icon .scroll_circle {
+    width: 1vw;
+    height: 1vw;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: block;
+    animation: scrollDown 2s linear 0s infinite normal;
+}
+/* 스크롤 아이콘 움직이는 효과 */
+@keyframes scrollDown {
+    0% {
+        bottom: 42%;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes tooltip {
+    0% {
+        transform: rotate(-10deg)
+    }
+    100% {
+        transform: rotate(10deg)
+    }
 }
