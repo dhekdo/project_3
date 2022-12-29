@@ -44,7 +44,7 @@ ul, ol, li {
     justify-content: space-between;
 }
 .top header nav .logo a span  {
-    font-size: 3.8rem;
+    font-size: 3.5vw;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
@@ -109,7 +109,7 @@ ul, ol, li {
 }
 .top .mainBg .mainBg_on .books {
     position: absolute;
-    top: 54%;
+    top: 53.5%;
     right: 54.3%;
     width: 13vw;
     height: 3.9vw;
@@ -139,13 +139,13 @@ ul, ol, li {
 .top .mainBg .mainBg_on .stand {
     position: absolute;
     top: 13%;
-    left: 36.4%;
+    left: 36.2%;
     width: 26.5vw;
     height: 29vw;
     z-index: 2;
 }
 .top .mainBg .mainBg_on .stand:hover .stand_on_img,
-.top .mainBg .mainBg_on .stand:hover .tool_1 {
+.top .mainBg .mainBg_on .stand:hover .tool_text {
     display: block;
 }
 .top .mainBg .mainBg_on .stand img:nth-child(2) {
@@ -156,13 +156,40 @@ ul, ol, li {
     width: 50%;
     display: none;
 }
-.top .mainBg .mainBg_on .stand img:nth-child(3) {
+.top .mainBg .mainBg_on .stand .tool_text {
     position: absolute;
     top: -7%;
     left: 25%;
     width: 11.87vw;
     height: 10vw;
     display: none;
+    text-align: center;
+    color: #fff;
+}
+.top .mainBg .mainBg_on .stand .tool_text div:first-child {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+.top .mainBg .mainBg_on .stand .tool_text div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    width: 11.8vw;
+    height: 10vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.top .mainBg .mainBg_on .stand .tool_text div:nth-child(2) img {
+    width: 0.9vw;
+    height: 0.8vw;
+    display: block;
+    margin: 0 auto;
+}
+.top .mainBg .mainBg_on .stand .tool_text div span {
+    font-size: 1vw;
 }
 .top .mainBg .mainBg_on .tennis {
     position: absolute;
@@ -179,25 +206,6 @@ ul, ol, li {
     height: 6vw;
     z-index: 3;
 }
-.top .mainBg .mainBg_on .cosmetics {
-    position: absolute;
-    top: 40.5%;
-    right: 36%;
-    width: 3vw;
-    height: 5.3vw;
-    z-index: 3;
-}
-.top .mainBg .mainBg_on .cosmetics:hover .cos_on {
-    display: block;
-}
-.top .mainBg .mainBg_on .cosmetics .cos_on {
-    position: absolute;
-    top: -160%;
-    left: -70%;
-    width: 8.6vw;
-    height: 7.7vw;
-    display: none;
-}
 .top .mainBg .mainBg_on .projector {
     position: absolute;
     top: 48%;
@@ -211,6 +219,9 @@ ul, ol, li {
 .top .mainBg .mainBg_on .projector:hover .pr_on img {
     display: block;
 }
+.top .mainBg .mainBg_on .projector:hover .tool_text2 {
+    display: block;
+}
 .top .mainBg .mainBg_on .projector > img:nth-child(2) {
     position: absolute;
     top: -190%;
@@ -219,19 +230,76 @@ ul, ol, li {
     height: 250%;
     display: none;
 }
-.top .mainBg .mainBg_on .projector div > img:first-child {
-    position: absolute;
-    top: -250%;
-    left: -30%;
-    width: 12vw;
-    height: 10.5vw;
-    display: none;
-}
-.top .mainBg .mainBg_on .projector div > img:nth-child(2) {
+.top .mainBg .mainBg_on .projector .pr_on img {
     position: absolute;
     top: -350%;
     right: -460%;
     width: 16.3vw;
     height: 12.7vw;
     display: none;
+}
+.top .mainBg .mainBg_on .projector .tool_text2 {
+    position: absolute;
+    top: -250%;
+    left: -30%;
+    width: 12vw;
+    height: 10.5vw;
+    opacity: 0.9;
+    display: none;
+}
+.top .mainBg .mainBg_on .projector .tool_text2 .pr_on_tool {
+    position: relative;
+}
+.top .mainBg .mainBg_on .projector .tool_text2 div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.top .mainBg .mainBg_on .projector .tool_text2 div:nth-child(2) span {
+    font-size: 1vw;
+    color: #fff;
+}
+.top .mainBg .mainBg_on .cosmetics {
+    position: absolute;
+    top: 40.5%;
+    right: 36%;
+    width: 3vw;
+    height: 5.3vw;
+    z-index: 3;
+}
+.top .mainBg .mainBg_on .cosmetics:hover .tool_text3 {
+    display: block;
+}
+.top .mainBg .mainBg_on .cosmetics .tool_text3 {
+    position: absolute;
+    top: -160%;
+    left: -50%;
+    width: 8.3vw;
+    height: 7.7vw;
+    opacity: 0.9;
+    display: none;
+}
+.top .mainBg .mainBg_on .cosmetics .tool_text3 .cos_on {
+    position: relative;
+}
+.top .mainBg .mainBg_on .cosmetics .tool_text3 div:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.top .mainBg .mainBg_on .cosmetics .tool_text3 div:nth-child(2) span {
+    font-size: 0.9vw;
+    color: #fff;
 }

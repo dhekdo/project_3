@@ -4,3 +4,4 @@ $("#mainSwi").click(function(){
     $(".mainBg_on").show();
     $("#mainSwi").css("cursor", "default");
 });
+
