@@ -51,6 +51,7 @@ ul, ol, li {
 }
 .top header nav .mainMenu {
     width: 1.5vw;
+    z-index: 50;
 }
 .top header nav .mainMenu .eye {
     display: flex;
@@ -71,6 +72,7 @@ ul, ol, li {
 }
 .top .mainBg img {
     width: 100%;
+    height: 100%;
 }
 .top .mainBg .mainBg_off {
     position: relative;
@@ -92,11 +94,7 @@ ul, ol, li {
     position: absolute;
     top: 0;
 }
-
-.bgOff {
-    opacity: 0%;
-    transition: all 1.8s;
-}
+/* 홈 화면 줄 움직이는 애니메이션 */
 @keyframes upDown {
     0% {
         top: 0;
@@ -104,4 +102,136 @@ ul, ol, li {
     100%{
         top: -2%;
     }
+}
+/* 메인 마우스오버 묶음 */
+.top .mainBg .mainBg_on > div {
+    cursor: pointer;
+}
+.top .mainBg .mainBg_on .books {
+    position: absolute;
+    top: 54%;
+    right: 54.3%;
+    width: 13vw;
+    height: 3.9vw;
+    z-index: 3;
+}
+.top .mainBg .mainBg_on .cart {
+    position: absolute;
+    bottom: 5%;
+    right: 14%;
+    width: 21.5vw;
+    height: 21.8vw;
+}
+.top .mainBg .mainBg_on .cup {
+    position: absolute;
+    top: 39.8%;
+    left: 15.2%;
+    width: 8.9vw;
+    height: 8.9vw;
+}
+.top .mainBg .mainBg_on .frame {
+    position: absolute;
+    top: 28.5%;
+    right: 22.8%;
+    width: 6vw;
+    height: 8.7vw;
+}
+.top .mainBg .mainBg_on .stand {
+    position: absolute;
+    top: 13%;
+    left: 36.4%;
+    width: 26.5vw;
+    height: 29vw;
+    z-index: 2;
+}
+.top .mainBg .mainBg_on .stand:hover .stand_on_img,
+.top .mainBg .mainBg_on .stand:hover .tool_1 {
+    display: block;
+}
+.top .mainBg .mainBg_on .stand img:nth-child(2) {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    display: none;
+}
+.top .mainBg .mainBg_on .stand img:nth-child(3) {
+    position: absolute;
+    top: -7%;
+    left: 25%;
+    width: 11.87vw;
+    height: 10vw;
+    display: none;
+}
+.top .mainBg .mainBg_on .tennis {
+    position: absolute;
+    bottom: 14.7%;
+    left: 36%;
+    width: 20vw;
+    height: 7vw;
+}
+.top .mainBg .mainBg_on .turntables {
+    position: absolute;
+    top: 39.8%;
+    left: 31.9%;
+    width: 12.3vw;
+    height: 6vw;
+    z-index: 3;
+}
+.top .mainBg .mainBg_on .cosmetics {
+    position: absolute;
+    top: 40.5%;
+    right: 36%;
+    width: 3vw;
+    height: 5.3vw;
+    z-index: 3;
+}
+.top .mainBg .mainBg_on .cosmetics:hover .cos_on {
+    display: block;
+}
+.top .mainBg .mainBg_on .cosmetics .cos_on {
+    position: absolute;
+    top: -160%;
+    left: -70%;
+    width: 8.6vw;
+    height: 7.7vw;
+    display: none;
+}
+.top .mainBg .mainBg_on .projector {
+    position: absolute;
+    top: 48%;
+    left: 24%;
+    width: 8.3vw;
+    height: 4.6vw;
+}
+.top .mainBg .mainBg_on .projector:hover .pr_on_img {
+    display: block;
+}
+.top .mainBg .mainBg_on .projector:hover .pr_on img {
+    display: block;
+}
+.top .mainBg .mainBg_on .projector > img:nth-child(2) {
+    position: absolute;
+    top: -190%;
+    left: 82%;
+    width: 200%;
+    height: 250%;
+    display: none;
+}
+.top .mainBg .mainBg_on .projector div > img:first-child {
+    position: absolute;
+    top: -250%;
+    left: -30%;
+    width: 12vw;
+    height: 10.5vw;
+    display: none;
+}
+.top .mainBg .mainBg_on .projector div > img:nth-child(2) {
+    position: absolute;
+    top: -350%;
+    right: -460%;
+    width: 16.3vw;
+    height: 12.7vw;
+    display: none;
 }
