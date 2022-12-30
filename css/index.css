@@ -16,6 +16,10 @@
 body {
     font-family: 'SUIT-Regular';
     -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
+    user-select: none;
 }
 a {
     text-decoration: none;
@@ -61,7 +65,7 @@ ul, ol, li {
 }
 .top header nav .mainMenu .eye {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .top header nav .mainMenu .eye span {
     width: 0.35vw;
@@ -118,7 +122,7 @@ ul, ol, li {
     }
 }
 /* 메인 마우스오버 묶음 */
-.top .mainBg .mainBg_on > div {
+.top .mainBg .mainBg_on > div:not(:last-child) {
     cursor: pointer;
 }
 .top .mainBg .mainBg_on .books {
@@ -172,7 +176,7 @@ ul, ol, li {
 }
 .top .mainBg .mainBg_on .stand .tool_text {
     position: absolute;
-    top: -7%;
+    top: -8%;
     left: 25%;
     width: 11.87vw;
     height: 10vw;
@@ -201,10 +205,12 @@ ul, ol, li {
     width: 0.9vw;
     height: 0.8vw;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 3%;
 }
 .top .mainBg .mainBg_on .stand .tool_text div span {
     font-size: 1vw;
+    font-family: 'SeoulHangang';
+    line-height: 120%;
 }
 .top .mainBg .mainBg_on .tennis {
     position: absolute;
@@ -280,6 +286,8 @@ ul, ol, li {
 .top .mainBg .mainBg_on .projector .tool_text2 div:nth-child(2) span {
     font-size: 1vw;
     color: #fff;
+    font-family: 'SeoulHangang';
+    line-height: 120%;
 }
 .top .mainBg .mainBg_on .cosmetics {
     position: absolute;
@@ -319,8 +327,31 @@ ul, ol, li {
 .top .mainBg .mainBg_on .cosmetics .tool_text3 div:nth-child(2) span {
     font-size: 0.9vw;
     color: #fff;
+    font-family: 'SeoulHangang';
+    line-height: 120%;
+}
+.top .mainBg .mainBg_on .time {
+    position: absolute;
+    bottom: 43%;
+    right: 4%;
+    width: 12.3vw;
+    height: 3vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.top .mainBg .mainBg_on .time img {
+    display: none;
+}
+.top .mainBg .mainBg_on .time span {
+    font-size: 1vw;
+    font-family: 'SeoulHangang';
+    color: #fff;
+    line-height: 300%;
+    display: none;
 }
 
+/* 스크롤 아이콘 */
 .scroll_icon {
     position: absolute;
     bottom: 2%;
@@ -328,6 +359,7 @@ ul, ol, li {
     width: 10vw;
     transform: translate(-50%,0);
     text-align: center;
+    cursor: default;
 }
 .scroll_icon span {
     font-size: 0.6vw;
@@ -366,6 +398,7 @@ ul, ol, li {
     }
 }
 
+/* 툴팁 움직이는 효과 */
 @keyframes tooltip {
     0% {
         transform: rotate(-10deg)
@@ -373,4 +406,38 @@ ul, ol, li {
     100% {
         transform: rotate(10deg)
     }
+}
+
+/* 메뉴 박스  */
+.top .mainBg .menu_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2ecdc;
+    z-index: 5;
+    font-family: 'SeoulHangang';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+.top .mainBg .menu_box .menu_box_inner {
+    display: flex;
+    justify-content: center;
+}
+.top .mainBg .menu_box .menu_box_inner > ul > li > a{
+    font-size: 3.2vw;
+    line-height: 170%;
+    color: black;
+}
+.top .mainBg .menu_box .menu_box_inner .mini_menu li {
+    line-height: 150%;
+    text-indent: 10%;
+}
+.top .mainBg .menu_box .menu_box_inner .mini_menu a {
+    font-size: 1.5vw;
+    color: black;
+
 }

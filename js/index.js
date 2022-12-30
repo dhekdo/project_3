@@ -5,3 +5,34 @@ $("#mainSwi").click(function(){
     $("#mainSwi").css("cursor", "default");
 });
 
+// 시간 보이는 효과
+$(".books").hover(function(){
+    $(".time img:nth-child(4), .time span").show();
+},function(){
+    $(".time img, .time span").hide();
+});
+$(".cart").hover(function(){
+    $(".time img:nth-child(3), .time span").show();
+},function(){
+    $(".time img, .time span").hide();
+});
+$(".cup").hover(function(){
+    $(".time img:nth-child(2), .time span").show();
+},function(){
+    $(".time img, .time span").hide();
+});
+$(".frame").hover(function(){
+    $(".time img:nth-child(1), .time span").show();
+},function(){
+    $(".time img, .time span").hide();
+});
+$(".tennis").hover(function(){
+    $(".time img:nth-child(5), .time span").show();
+},function(){
+    $(".time img, .time span").hide();
+});
+$(".turntables").hover(function(){
+    $(".time img:nth-child(6), .time span").show();
+},function(){
+    $(".time img, .time span").hide();
+});
