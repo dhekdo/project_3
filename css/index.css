@@ -72,14 +72,14 @@ ul, ol, li {
     height: 0.6vw;
     background-color: #fff;
 }
-.top header nav .mainMenu .mouse {
+.top header nav .mainMenu .mouth {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 0.9vw;
+    height: 1.2vw;
 }
-.top header nav .mainMenu .mouse span {
+.top header nav .mainMenu .mouth span {
     width: 2vw;
     height: 0.15vw;
     background-color: #fff;
@@ -125,7 +125,10 @@ ul, ol, li {
 .top .mainBg .mainBg_on > div:not(:last-child) {
     cursor: pointer;
 }
-.top .mainBg .mainBg_on .books {
+.top .mainBg .mainBg_on .main_hover img:last-child {
+    opacity: 0;
+}
+.top .mainBg .mainBg_on .books img {
     position: absolute;
     top: 53.5%;
     right: 54.3%;
@@ -133,21 +136,21 @@ ul, ol, li {
     height: 3.9vw;
     z-index: 3;
 }
-.top .mainBg .mainBg_on .cart {
+.top .mainBg .mainBg_on .cart img {
     position: absolute;
     bottom: 5%;
     right: 14%;
     width: 21.5vw;
     height: 21.8vw;
 }
-.top .mainBg .mainBg_on .cup {
+.top .mainBg .mainBg_on .cup img {
     position: absolute;
     top: 39.8%;
     left: 15.2%;
     width: 8.9vw;
     height: 8.9vw;
 }
-.top .mainBg .mainBg_on .frame {
+.top .mainBg .mainBg_on .frame img {
     position: absolute;
     top: 28.5%;
     right: 22.8%;
@@ -172,7 +175,7 @@ ul, ol, li {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
-    display: none;
+    opacity: 0;
 }
 .top .mainBg .mainBg_on .stand .tool_text {
     position: absolute;
@@ -180,7 +183,7 @@ ul, ol, li {
     left: 25%;
     width: 11.87vw;
     height: 10vw;
-    display: none;
+    opacity: 0;
     text-align: center;
     color: #fff;
     animation: tooltip 1.3s linear 0s infinite alternate;
@@ -212,14 +215,14 @@ ul, ol, li {
     font-family: 'SeoulHangang';
     line-height: 120%;
 }
-.top .mainBg .mainBg_on .tennis {
+.top .mainBg .mainBg_on .tennis img {
     position: absolute;
     bottom: 14.7%;
     left: 36%;
     width: 20vw;
     height: 7vw;
 }
-.top .mainBg .mainBg_on .turntables {
+.top .mainBg .mainBg_on .turntables img {
     position: absolute;
     top: 39.8%;
     left: 31.9%;
@@ -249,7 +252,7 @@ ul, ol, li {
     left: 82%;
     width: 200%;
     height: 250%;
-    display: none;
+    opacity: 0;
 }
 .top .mainBg .mainBg_on .projector .pr_on img {
     position: absolute;
@@ -257,7 +260,7 @@ ul, ol, li {
     right: -460%;
     width: 16.3vw;
     height: 12.7vw;
-    display: none;
+    opacity: 0;
 }
 .top .mainBg .mainBg_on .projector .tool_text2 {
     position: absolute;
@@ -265,8 +268,7 @@ ul, ol, li {
     left: -30%;
     width: 12vw;
     height: 10.5vw;
-    opacity: 0.9;
-    display: none;
+    opacity: 0;
     animation: tooltip 1.3s linear 0s infinite alternate;
 }
 .top .mainBg .mainBg_on .projector .tool_text2 .pr_on_tool {
@@ -306,8 +308,7 @@ ul, ol, li {
     left: -50%;
     width: 8.3vw;
     height: 7.7vw;
-    opacity: 0.9;
-    display: none;
+    opacity: 0;
     animation: tooltip 1.3s linear 0s infinite alternate;
 }
 .top .mainBg .mainBg_on .cosmetics .tool_text3 .cos_on {
@@ -336,18 +337,22 @@ ul, ol, li {
     right: 4%;
     width: 12.3vw;
     height: 3vw;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 .top .mainBg .mainBg_on .time img {
+    position: absolute;
+    bottom: 43%;
+    right: 4%;
+    width: 12.3vw;
+    height: 3vw;
     display: none;
 }
 .top .mainBg .mainBg_on .time span {
     font-size: 1vw;
+    position: absolute;
+    bottom: -10%;
+    right: 15%;
     font-family: 'SeoulHangang';
     color: #fff;
-    line-height: 300%;
     display: none;
 }
 
@@ -383,7 +388,7 @@ ul, ol, li {
 .scroll_icon .scroll_circle {
     width: 1vw;
     height: 1vw;
-    border: 1px solid red;
+    border: 3px solid red;
     border-radius: 50%;
     display: block;
     animation: scrollDown 2s linear 0s infinite normal;
