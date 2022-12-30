@@ -5,6 +5,7 @@ $("#mainSwi").click(function(){
     $("#mainSwi").css("cursor", "default");
 });
 
+
 // 시간 보이는 효과
 $(".books").hover(function(){
     $(".time img:nth-child(4), .time span").show();
@@ -35,4 +36,11 @@ $(".turntables").hover(function(){
     $(".time img:nth-child(6), .time span").show();
 },function(){
     $(".time img, .time span").hide();
+});
+
+
+// 메뉴바 클릭 이벤트
+$(".mainMenu").click(function(){
+    $(".menu_box").slideToggle();
+    
 });
