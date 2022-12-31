@@ -52,11 +52,16 @@ ul, ol, li {
     font-size: 3.5vw;
     font-weight: 400;
     text-transform: uppercase;
+}
+.logo_off {
     color: #fff;
+}
+.logo_on {
+    color: black;
 }
 .top header nav .mainMenu {
     width: 2vw;
-    height: 3vw;
+    height: 2.9vw;
     z-index: 50;
     display: flex;
     flex-direction: column;
@@ -70,19 +75,34 @@ ul, ol, li {
 .top header nav .mainMenu .eye span {
     width: 0.35vw;
     height: 0.6vw;
-    background-color: #fff;
 }
 .top header nav .mainMenu .mouth {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
     height: 1.2vw;
 }
 .top header nav .mainMenu .mouth span {
     width: 2vw;
     height: 0.15vw;
+}
+.menu_off {
     background-color: #fff;
+}
+.menu_on {
+    background-color: black;
+}
+.rot1 {
+    position: absolute;
+    top: 12%;
+    transform: rotate(20deg);
+}
+.rot2 {
+    position: absolute;
+    top: 12%;
+    transform: rotate(-20deg);
 }
 .top .mainBg {
     width: 100%;
@@ -325,7 +345,7 @@ ul, ol, li {
     justify-content: center;
     text-align: center;
 }
-.top .mainBg .mainBg_on .cosmetics .tool_text3 div:nth-child(2) span {
+.top .mainBg .mainBg_on .cosmetics .tool_text3 div:nth-child(2) span a {
     font-size: 0.9vw;
     color: #fff;
     font-family: 'SeoulHangang';
@@ -366,19 +386,41 @@ ul, ol, li {
     text-align: center;
     cursor: default;
 }
+.scroll_icon::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    content: "";
+    width: 0.1vw;
+    height: 0.1vw;
+    border: 0.1vw solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fff;
+}
 .scroll_icon span {
     font-size: 0.6vw;
     color: #fff;
     font-weight: 600;
 }
-.scroll_icon .scroll_line::after {
-    content: "";
+.scroll_icon .scroll_line {
     width: 0.05vw;
     height: 3vw;
-    display: block;
     background-color: #fff;
     margin: 3% auto;
+    display: block;
 }
+/* .scroll_icon .scroll_line::after {
+    content: "";
+    width: 0.5vw;
+    height: 0.5vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fff;
+    margin: 3% auto;
+} */
 .scroll_icon .scroll_circle {
     position: absolute;
     bottom: 0;
@@ -427,26 +469,49 @@ ul, ol, li {
 }
 .top .mainBg .menu_box .menu_box_inner {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 53%;
+    left: 52%;
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: center;
     
 }
+.top .mainBg .menu_box .menu_box_inner > ul > li > span {
+    display: inline-block;
+    width: 4%;
+    height: 1%;
+    font-size: 1.2vw;
+    margin-top: -10%;
+    vertical-align: middle;
+}
+.top .mainBg .menu_box .menu_box_inner > ul > li {
+    width: 35vw;
+}
 .top .mainBg .menu_box .menu_box_inner > ul > li > a {
-    font-size: 3.2vw;
+    font-size: 3.5vw;
     line-height: 170%;
     color: black;
 }
-
+.top .mainBg .menu_box .menu_box_inner .mini_menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
 .top .mainBg .menu_box .menu_box_inner .mini_menu li {
-    line-height: 160%;
-    text-indent: 10%;
+    line-height: 175%;
+    text-indent: 5%;
+    
 }
 .top .mainBg .menu_box .menu_box_inner .mini_menu a {
     font-size: 1.5vw;
     color: black;
-
 }
-
+.top .mainBg .menu_box .menu_box_inner .mini_menu a::before {
+    content: "•";
+}
+.black {
+    color: black;
+}
+.bgblack {
+    background-color: black;
+}

@@ -60,10 +60,14 @@ $(".turntables").hover(function(){
     $(".time img, .time span").stop().fadeOut();
 });
 
-
 // 메뉴바 클릭 이벤트
 $(".mainMenu").click(function(){
-    $(".menu_box").slideToggle();
-    
+    $(".menu_box").slideToggle(function(){
+        $(".mainMenu .eye span, .mainMenu .mouth span").toggleClass("menu_on");
+        $(".logo a span").toggleClass("logo_on");
+        $(".mainMenu .mouth span:nth-child(1)").toggleClass("rot1");
+        $(".mainMenu .mouth span:nth-child(2)").toggleClass("rot2");
+    });
 });
+
 
