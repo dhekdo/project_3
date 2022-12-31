@@ -73,7 +73,7 @@ ul, ol, li {
     justify-content: space-evenly;
 }
 .top header nav .mainMenu .eye span {
-    width: 0.35vw;
+    width: 0.33vw;
     height: 0.6vw;
 }
 .top header nav .mainMenu .mouth {
@@ -82,7 +82,7 @@ ul, ol, li {
     justify-content: space-around;
     align-items: center;
     position: relative;
-    height: 1.2vw;
+    height: 1.3vw;
 }
 .top header nav .mainMenu .mouth span {
     width: 2vw;
@@ -106,6 +106,8 @@ ul, ol, li {
 }
 .top .mainBg {
     width: 100%;
+    height: 100vh;
+    position: relative;
     overflow: hidden;
 }
 .top .mainBg img {
@@ -379,7 +381,7 @@ ul, ol, li {
 /* 스크롤 아이콘 */
 .scroll_icon {
     position: absolute;
-    bottom: 2%;
+    bottom: 4.1%;
     left: 50%;
     width: 10vw;
     transform: translate(-50%,0);
@@ -406,21 +408,11 @@ ul, ol, li {
 }
 .scroll_icon .scroll_line {
     width: 0.05vw;
-    height: 3vw;
+    height: 2.8vw;
     background-color: #fff;
     margin: 3% auto;
     display: block;
 }
-/* .scroll_icon .scroll_line::after {
-    content: "";
-    width: 0.5vw;
-    height: 0.5vw;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #fff;
-    margin: 3% auto;
-} */
 .scroll_icon .scroll_circle {
     position: absolute;
     bottom: 0;
@@ -509,9 +501,49 @@ ul, ol, li {
 .top .mainBg .menu_box .menu_box_inner .mini_menu a::before {
     content: "•";
 }
-.black {
-    color: black;
+
+/* 앰플 소개 구좌 */
+.amp {
+    background-color: #ea6852;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
-.bgblack {
-    background-color: black;
+.amp div:first-child {
+    width: 62.5vw;
+    height: 64vw;
+    margin: 0 auto;
+}
+.amp div:first-child img {
+    width: 100%;
+}
+.amp div:nth-child(2) {
+    position: absolute;
+    top: 14%;
+    left: 13%;
+}
+.amp div:nth-child(2)::before {
+    content: "";
+    background-image: url('img/shape1.svg');
+    width: 1.4vw;
+    height: 2.8vw;
+    position: absolute;
+    bottom: 0.85vw;
+    left: -2.2vw;
+    display: inline-block;
+    background-size: 100% 100%;
+}
+.amp div:nth-child(2)::after {
+    content: "";
+    width: 105%;
+    height: 0.05vw;
+    background-color: #fff;
+    position: absolute;
+    bottom: 2.2vw;
+    left: -2vw;
+}
+.amp div:nth-child(2) span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 11.5vw;
+    color: #fff;
 }

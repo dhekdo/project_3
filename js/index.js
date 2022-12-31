@@ -5,6 +5,16 @@ $("#mainSwi").click(function(){
     $("#mainSwi").css("cursor", "default");
 });
 
+// 메뉴바 클릭 이벤트
+$(".mainMenu").click(function(){
+    $(".menu_box").slideToggle(function(){
+        $(".mainMenu .eye span, .mainMenu .mouth span").toggleClass("menu_on");
+        $(".logo a span").toggleClass("logo_on");
+        $(".mainMenu .mouth span:nth-child(1)").toggleClass("rot1");
+        $(".mainMenu .mouth span:nth-child(2)").toggleClass("rot2");
+    });
+});
+
 // 메인 호버 이벤트
 $(".main_hover").hover(function(){
     $(this).find("img:nth-child(1)").stop().animate({opacity:"0"},500);
@@ -60,14 +70,6 @@ $(".turntables").hover(function(){
     $(".time img, .time span").stop().fadeOut();
 });
 
-// 메뉴바 클릭 이벤트
-$(".mainMenu").click(function(){
-    $(".menu_box").slideToggle(function(){
-        $(".mainMenu .eye span, .mainMenu .mouth span").toggleClass("menu_on");
-        $(".logo a span").toggleClass("logo_on");
-        $(".mainMenu .mouth span:nth-child(1)").toggleClass("rot1");
-        $(".mainMenu .mouth span:nth-child(2)").toggleClass("rot2");
-    });
-});
+
 
 
