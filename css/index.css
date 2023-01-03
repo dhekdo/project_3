@@ -34,6 +34,7 @@ ul, ol, li {
 
 .top {
     width: 100%;
+    background-color: #ea6852;
 }
 .top header {
     width: 100%;
@@ -61,7 +62,7 @@ ul, ol, li {
 }
 .top header nav .mainMenu {
     width: 2vw;
-    height: 2.9vw;
+    height: 2.1vw;
     z-index: 50;
     display: flex;
     flex-direction: column;
@@ -79,7 +80,7 @@ ul, ol, li {
 .top header nav .mainMenu .mouth {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
     height: 1.3vw;
@@ -96,12 +97,12 @@ ul, ol, li {
 }
 .rot1 {
     position: absolute;
-    top: 12%;
+    top: 28%;
     transform: rotate(20deg);
 }
 .rot2 {
     position: absolute;
-    top: 12%;
+    top: 28%;
     transform: rotate(-20deg);
 }
 .top .mainBg {
@@ -117,6 +118,7 @@ ul, ol, li {
 .top .mainBg .mainBg_off {
     position: relative;
     z-index: 51;
+    height: 100vh;
 }
 .top .mainBg .mainBg_off > div {
     width: 1.2vw;
@@ -453,7 +455,7 @@ ul, ol, li {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #f2ecdc;
     z-index: 5;
     font-family: 'SeoulHangang';
@@ -503,26 +505,30 @@ ul, ol, li {
 }
 
 /* 앰플 소개 구좌 */
-.amp {
+.main_content {
+    /* display: none; */
+}
+
+.main_content .amp {
     background-color: #ea6852;
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
-.amp div:first-child {
+.main_content .amp > div:first-child {
     width: 62.5vw;
     height: 64vw;
     margin: 0 auto;
 }
-.amp div:first-child img {
+.main_content .amp > div:first-child img {
     width: 100%;
 }
-.amp div:nth-child(2) {
+.main_content .amp > div:nth-child(2) {
     position: absolute;
     top: 14%;
     left: 13%;
 }
-.amp div:nth-child(2)::before {
+.main_content .amp > div:nth-child(2)::before {
     content: "";
     background-image: url('img/shape1.svg');
     width: 1.4vw;
@@ -533,7 +539,7 @@ ul, ol, li {
     display: inline-block;
     background-size: 100% 100%;
 }
-.amp div:nth-child(2)::after {
+.main_content .amp > div:nth-child(2)::after {
     content: "";
     width: 105%;
     height: 0.05vw;
@@ -542,8 +548,177 @@ ul, ol, li {
     bottom: 2.2vw;
     left: -2vw;
 }
-.amp div:nth-child(2) span {
+.main_content .amp > div:nth-child(2) span {
     font-family: 'Roboto Slab', serif;
     font-size: 11.5vw;
     color: #fff;
+}
+.main_content .amp .content_box {
+    position: absolute;
+    top: 53%;
+    left: 9%;
+    color: #fff;
+}
+.main_content .amp .content_box > span:first-child {
+    font-size: 2.1vw;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+.main_content .amp .content_box > span:nth-child(2) {
+    font-size: 1.15vw;
+    line-height: 2.5;
+}
+.main_content .amp .content_box > span:last-child {
+    font-size: 0.9vw;
+    line-height: 1.4;
+}
+.main_content .amp .content_box a {
+    color: #fff;
+    font-size: 0.9vw;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+}
+.main_content .amp .content_box a span {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 1.4vw;
+    height: 1.4vw;
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 2%;
+}
+.main_content .amp .content_box a span::after {
+    content: "";
+    background-image: url("img/prod-arrow1.svg");
+    color: #fff;
+    width: 1.35vw;
+    height: 1.35vw;
+    display: inline-block;
+    background-size: 90% 90%;
+}
+.main_content .amp .amp_img_box {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15.2vw;
+    height: 31.6vw;
+}
+
+.main_content .amp .amp_img_box .bottle_wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15.2vw;
+    height: 31.6vw;
+}
+.main_content .amp .amp_img_box .bottle_wrap img {
+    width: 100%;
+}
+.main_content .amp .amp_img_box .bottle_wrap > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -5;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 10.7vw;
+    height: 29.5vw
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_head {
+    width: 7.5vw;
+    height: 12.65vw;
+    margin: 0 auto;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_head img {
+    width: 100%;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body {
+    width: 10.7vw;
+    height: 16.8vw;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div {
+    position: absolute;
+    bottom: 0;
+    width: 10.7vw;
+    height: 16.8vw;
+    overflow: hidden;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+
+.main_content .amp .amp_img_box .texture_wrap {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(1) {
+    position: absolute;
+    top: 13vw;
+    right: -15vw;
+    width: 2.2vw;
+    height: 3vw;
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(2) {
+    position: absolute;
+    top: 17vw;
+    left: -0.8vw;
+    width: 1.9vw;
+    height: 1.9vw;
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(3) {
+    position: absolute;
+    top: 22vw;
+    right: -17vw;
+    width: 1.6vw;
+    height: 1.6vw;
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(4) {
+    position: absolute;
+    top: 14vw;
+    left: -1.5vw;
+    width: 0.67vw;
+    height: 0.67vw;
+
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(5) {
+    position: absolute;
+    top: 23vw;
+    left: -3vw;
+    width: 1.2vw;
+    height: 1.2vw;
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(6) {
+    position: absolute;
+    top: 25vw;
+    right: -12vw;
+    width: 1.8vw;
+    height: 2.5vw;
+}
+.main_content .amp .amp_img_box .texture_wrap > img:nth-child(7) {
+    position: absolute;
+    top: 20.5vw;
+    right: -13vw;
+    width: 0.67vw;
+    height: 0.67vw;
 }
