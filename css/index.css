@@ -505,15 +505,23 @@ ul, ol, li {
 }
 
 /* 앰플 소개 구좌 */
+
+/* 앰플 */
 .main_content {
     /* display: none; */
 }
-
-.main_content .amp {
-    background-color: #ea6852;
+.main_content .content_inner {
     position: relative;
     height: 100vh;
     overflow: hidden;
+}
+
+.main_content .amp {
+    position: absolute;
+    /* background-color: #ea6852; */
+    background-color: grey;
+    width: 100%;
+    height: 100%;
 }
 .main_content .amp > div:first-child {
     width: 62.5vw;
@@ -639,6 +647,7 @@ ul, ol, li {
 }
 .main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_head img {
     width: 100%;
+    height: 100%;
 }
 .main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body {
     width: 10.7vw;
@@ -653,20 +662,33 @@ ul, ol, li {
 }
 .main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div {
     position: absolute;
-    bottom: 0;
+    bottom: 0.07vw;
+    right: 0;
     width: 10.7vw;
     height: 16.8vw;
-    overflow: hidden;
+    -webkit-mask-image: url("img/item-ampoule-mask.png");
+    mask-image: url("img/item-ampoule-mask.png");
+    -webkit-mask-size: 10.7291666667vw,16.875vw;
+    mask-size: 10.7291666667vw,16.875vw;
 }
-.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div > img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div > div {
+    width: 31.56vw;
+    height: 16.8vw;
+}
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div > div >img {
     width: 100%;
     height: 100%;
-    z-index: -3;
 }
-
+.main_content .amp .amp_img_box .bottle_wrap .bottle .bottle_body > div > div > span {
+    background-image: url("img/item-ampoule-logo.png");
+    display: inline-block;
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+    width: 4.27vw;
+    height: 1.1vw;
+    background-size: 100% auto;
+}
 .main_content .amp .amp_img_box .texture_wrap {
     position: absolute;
     top: 0;
@@ -721,4 +743,102 @@ ul, ol, li {
     right: -13vw;
     width: 0.67vw;
     height: 0.67vw;
+}
+
+/* 미스트 */
+.main_content .mist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgrey;
+}
+.main_content .mist div:nth-child(1) {
+    width: 47.44vw;
+    height: 32.1vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_content .mist > div:nth-child(2) {
+    position: absolute;
+    top: 25%;
+    right: 8%;
+    color: #eb4124;
+}
+.main_content .mist > div:nth-child(2)::before {
+    content: "";
+    background-image: url('img/shape2 (1).svg');
+    width: 1.4vw;
+    height: 2.8vw;
+    position: absolute;
+    bottom: 0.85vw;
+    right: -2vw;
+    display: inline-block;
+    background-size: 100% 100%;
+}
+.main_content .mist > div:nth-child(2)::after {
+    content: "";
+    width: 105%;
+    height: 0.05vw;
+    background-color: #eb4124;
+    position: absolute;
+    bottom: 2.2vw;
+    left: -1.2vw;
+}
+.main_content .mist > div:nth-child(2) span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 9.2vw;
+    color: #eb4124;
+}
+.main_content .mist .content_box2 {
+    position: absolute;
+    top: 58%;
+    right: 8%;
+    text-align: right;
+}
+.main_content .mist .content_box2 span, .main_content .mist .content_box2 a {
+    color: black;
+}
+.main_content .mist .content_box2 > span:first-child {
+    font-size: 2.1vw;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+.main_content .mist .content_box2 > span:nth-child(2) {
+    font-size: 1.15vw;
+    line-height: 2.5;
+}
+.main_content .mist .content_box2 > span:last-child {
+    font-size: 0.9vw;
+    line-height: 1.4;
+}
+.main_content .mist .content_box2 a {
+    color: black;
+    font-size: 0.9vw;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5% 0;
+}
+.main_content .mist .content_box2 a span {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 1.4vw;
+    height: 1.4vw;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 2%;
+}
+.main_content .mist .content_box2 a span::after {
+    content: "";
+    background-image: url("img/prod-arrow2.svg");
+    color: black;
+    width: 1.35vw;
+    height: 1.35vw;
+    display: inline-block;
+    background-size: 90% 90%;
 }
