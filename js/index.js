@@ -2,6 +2,7 @@
 $("#mainSwi").click(function(){
     $(".mainBg_off").fadeOut(2000);
     $(".mainBg_on").show();
+    $(".main_content").show();
     $("#mainSwi").css("cursor", "default");
 });
 
@@ -15,9 +16,12 @@ $(".mainMenu").click(function(){
     });
 });
 
-//스크롤시 헤더 노출
-$(document).scrollTop(function(){
-    $(".header").show();
+// 메뉴박스 마우스오버 효과
+$(".menu_box_inner > ul > li").mouseover(function(){
+    $(this).children().css({"color": "#ea6852", "transition": "all 0.5s"});
+});
+$(".menu_box_inner > ul > li").mouseout(function(){
+    $(this).children().css({"color": "", "transition": "all 0.5s"});
 });
 
 // 메인 호버 이벤트
@@ -74,7 +78,6 @@ $(".turntables").hover(function(){
 },function(){
     $(".time img, .time span").stop().fadeOut();
 });
-
 
 
 
