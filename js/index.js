@@ -15,6 +15,11 @@ $(".mainMenu").click(function(){
     });
 });
 
+//스크롤시 헤더 노출
+$(document).scrollTop(function(){
+    $(".header").show();
+});
+
 // 메인 호버 이벤트
 $(".main_hover").hover(function(){
     $(this).find("img:nth-child(1)").stop().animate({opacity:"0"},500);
