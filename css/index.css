@@ -35,6 +35,7 @@ ul, ol, li {
 .top {
     width: 100%;
     background-color: #ea6852;
+
 }
 body::-webkit-scrollbar {
     display: none;
@@ -123,7 +124,7 @@ body::-webkit-scrollbar {
     z-index: 51;
     height: 100vh;
 }
-.top .mainBg .mainBg_off > div {
+.top .mainBg .mainBg_off > div:nth-child(2) {
     width: 1.2vw;
     height: 24vw;
     position: absolute;
@@ -488,6 +489,23 @@ body::-webkit-scrollbar {
     font-size: 3.5vw;
     line-height: 170%;
     color: black;
+    position: relative;
+}
+.top .mainBg .menu_box .menu_box_inner > ul > li > a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-bottom: 0.2vw solid #ea6852;
+    transition: all 0.4s ease-out;
+    left: auto;
+    right: 0;
+    width: 0;
+    bottom: 0;
+}
+.top .mainBg .menu_box .menu_box_inner > ul > li:hover a::after {
+    width: 100%;
+    left: 0;
+    right: auto;
 }
 .top .mainBg .menu_box .menu_box_inner .mini_menu {
     display: flex;
@@ -497,9 +515,8 @@ body::-webkit-scrollbar {
 .top .mainBg .menu_box .menu_box_inner .mini_menu li {
     line-height: 285%;
     text-indent: 5%;
-    
 }
-.top .mainBg .menu_box .menu_box_inner .mini_menu a:hover {
+.top .mainBg .menu_box .menu_box_inner .mini_menu a:hover  {
     color: #ea6852;
 }
 .top .mainBg .menu_box .menu_box_inner .mini_menu a {
@@ -513,6 +530,10 @@ body::-webkit-scrollbar {
 /* 앰플 소개 구좌 */
 
 /* 앰플 */
+.amp_opa {
+    opacity: 0;
+}
+
 .main_content {
     display: none;
 }
@@ -758,6 +779,7 @@ body::-webkit-scrollbar {
     height: 100vh;
     background-color: #ede6d3;
     opacity: 0;
+    z-index: -2;
 }
 .main_content .mist > div:nth-child(1) {
     width: 47.44vw;

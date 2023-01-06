@@ -1,3 +1,9 @@
+// 메인 오프닝
+$(".opening").show(function(){
+    $(".opening").delay(2500).fadeOut();
+    $(".top").fadeIn();
+});
+
 // 줄 잡아당기면 홈화면 전환
 $("#mainSwi").click(function(){
     $(".mainBg_off").fadeOut(2000);
@@ -80,4 +86,11 @@ $(".turntables").hover(function(){
 });
 
 
+// 스크롤 이벤트
+$(window).scroll(function(){
 
+    let scrollTop = $(this).scrollTop();
+    if( scrollTop > 700 ){
+        $(".amp_opa").animate({opacity : 1}, 1000);
+    }
+});
