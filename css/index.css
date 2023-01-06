@@ -533,7 +533,9 @@ body::-webkit-scrollbar {
 .amp_opa {
     opacity: 0;
 }
-
+/* .amp_trans {
+    transform: translateY(40%);
+} */
 .main_content {
     display: none;
 }

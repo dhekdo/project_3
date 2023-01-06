@@ -89,8 +89,17 @@ $(".turntables").hover(function(){
 // 스크롤 이벤트
 $(window).scroll(function(){
 
-    let scrollTop = $(this).scrollTop();
-    if( scrollTop > 700 ){
-        $(".amp_opa").animate({opacity : 1}, 1000);
+    let ampScroll = $(this).scrollTop();
+    let ampOffset = $(".top").offset().top;
+    
+    if( ampScroll > ampOffset + 400 ){
+        $(".amp > div:nth-child(2), .amp_img_box").animate({opacity : 1}, 1500);
     }
+    if( ampScroll > ampOffset + 700 ){
+        $(".amp >div:nth-child(3)").animate({opacity : 1}, 2000);
+    }
+    if( ampScroll > ampOffset + 900 ){
+        $(".amp1").animate({opacity : 1}, 2000);
+    }
+    
 });
