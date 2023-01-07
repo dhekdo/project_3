@@ -91,15 +91,48 @@ $(window).scroll(function(){
 
     let ampScroll = $(this).scrollTop();
     let ampOffset = $(".top").offset().top;
+    let textureIndex = $(".texture_wrap > img:first").index();
+    let sc = 1;
     
-    if( ampScroll > ampOffset + 400 ){
-        $(".amp > div:nth-child(2), .amp_img_box").animate({opacity : 1}, 1500);
+    if( ampScroll > ampOffset + 800 ){
+        $(".amp > div:nth-child(2), .amp_img_box").animate({opacity : 1}, 1000);
     }
-    if( ampScroll > ampOffset + 700 ){
-        $(".amp >div:nth-child(3)").animate({opacity : 1}, 2000);
+    if( ampScroll > ampOffset + 1300 ){
+        $(".amp >div:nth-child(3)").animate({opacity : 1}, 1000);
     }
-    if( ampScroll > ampOffset + 900 ){
-        $(".amp1").animate({opacity : 1}, 2000);
+    if( ampScroll > ampOffset + 1600 ){
+        $(".amp1").animate({opacity : 1}, 1500);
     }
-    
+    if( ampScroll > ampOffset + 2000 + sc ){
+        $(".texture_wrap img").eq(textureIndex).animate({opacity : 1}, 1000);
+        // textureIndex++;
+        // for( textureIndex = 1; textureIndex < 6; textureIndex++ ){
+        //     $(".texture_wrap img").eq(textureIndex).animate({opacity : 1}, 2000);
+        //     for( let sc = 1; sc < 7; sc++ ){
+
+        //     }
+        // }
+            // for( let sc = 300; sc < 1600; sc =+ 300  ){
+            //     textureIndex++;
+            //     $(".texture_wrap img").eq(textureIndex).animate({opacity : 1}, 2000);
+            // }
+    }
+    if( ampScroll > ampOffset + 2300 ){
+        $(".texture_wrap img").eq(1).animate({opacity : 1}, 1000);
+    }
+    if( ampScroll > ampOffset + 2600 ){
+        $(".texture_wrap img").eq(2).animate({opacity : 1}, 1000);
+    }
+    if( ampScroll > ampOffset + 2900 ){
+        $(".texture_wrap img").eq(3).animate({opacity : 1}, 1000);
+    }
+    if( ampScroll > ampOffset + 3100 ){
+        $(".texture_wrap img").eq(4).animate({opacity : 1}, 1000);
+    }
+    if( ampScroll > ampOffset + 3400 ){
+        $(".texture_wrap img").eq(5).animate({opacity : 1}, 1000);
+    }
+    if( ampScroll > ampOffset + 3700 ){
+        $(".texture_wrap img").eq(6).animate({opacity : 1}, 1000);
+    }
 });

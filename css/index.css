@@ -533,27 +533,28 @@ body::-webkit-scrollbar {
 .amp_opa {
     opacity: 0;
 }
-/* .amp_trans {
-    transform: translateY(40%);
-} */
+
 .main_content {
     display: none;
 }
 .main_content .content_inner {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    height: 500vh;
+    /* overflow: hidden; */
+    background-color: #ea6852
 }
 .main_content .amp {
-    position: absolute;
-    background-color: #ea6852;
+    position: sticky;
+    top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 .main_content .amp > div:first-child {
     width: 62.5vw;
     height: 64vw;
     margin: 0 auto;
+    position: sticky;
+    top: 10vw;
 }
 .main_content .amp > div:first-child img {
     width: 100%;
@@ -693,8 +694,8 @@ body::-webkit-scrollbar {
     right: 0;
     width: 10.7vw;
     height: 16.8vw;
-    -webkit-mask-image: url("img/item-ampoule-mask.png");
-    mask-image: url("img/item-ampoule-mask.png");
+    -webkit-mask-image: url("../img/item-ampoule-mask.png");
+    mask-image: url("../img/item-ampoule-mask.png");
     -webkit-mask-size: 10.7291666667vw,16.875vw;
     mask-size: 10.7291666667vw,16.875vw;
 }
