@@ -94,21 +94,40 @@ $(window).scroll(function(){
     let ampBoxOffest = $(".amp").offset().top;
     
     if( ampScroll > ampOffset + 800 ){
-        $(".amp > div:nth-child(2)").css({transform : 'translateY(0px)', opacity : 1, transition : 'all 2s'});
+        $(".amp > div:nth-child(2)")
+        .css({
+            transform : 'translateY(0px)',
+            opacity : 1,
+            transition : 'all 2s'
+        });
         
     }
     if( ampScroll > ampOffset + 1000 ){
         $(".amp_img_box").animate({opacity : 1}, 1000);
     }
     if( ampScroll > ampOffset + 1400 ){
-        $(".amp >div:nth-child(3)").css({transform : 'translateY(0px)', opacity : 1, transition : 'all 2s'});
+        $(".amp >div:nth-child(3)")
+        .css({
+            transform : 'translateY(0px)',
+            opacity : 1,
+            transition : 'all 2s'
+        });
     }
     if( ampScroll > ampOffset + 1700 ){
-        $(".amp1").css({transform : 'rotate(0deg)', opacity : 1, transition : 'all 2s'});
+        $(".amp1").css({
+            transform : 'rotate(0deg)',
+            opacity : 1,
+            transition : 'all 2s'
+        });
     }
     for( textureIndex = 0; textureIndex < 7; textureIndex++  ){
         if( ampScroll > ampOffset + ( 2000 + textureIndex * 300 )){
-            $(".texture_wrap img").eq(textureIndex).css({transform : 'translateY(0px)', opacity : 1, transition : 'all 1.5s'});
+            $(".texture_wrap img").eq(textureIndex)
+            .css({
+                transform : 'translateY(0px)',
+                opacity : 1,
+                transition : 'all 1.5s'
+            });
         }
     }
 
@@ -122,7 +141,7 @@ $(window).scroll(function(){
     if( ampScroll > 4300){    
         $('.amp_mist_bg').css({ 
             opacity : 1,
-            transform: `translateX(${-start*1.2}px)`,
+            transform: `translateX(${-start*1.4}px)`,
             zIndex : 4,
             position : 'sticky',
             top : 0,
@@ -130,31 +149,27 @@ $(window).scroll(function(){
         });
         $(".mist1").css({opacity : -opa + 0.5});
         $(".amp").css({opacity : opa + 0.5 });
-       
-        
     }
-    // if(  ampScroll > ampOffset + 4300 ){
-    //     $(".amp_mist_bg").css({position : 'fixed' , top : 0, opacity : 1, zIndex : 6});
-    //     $(".amp").animate({opacity : 0});
-    //     $(".mist").css({position : 'sticky', top : 0});
-    // }
-    
 
-    // if( ampScroll > ampOffset + 4300 ){
-    //     $(".amp_mist_bg").css({
-    //         opacity : 1,
-    //         transform : 'translateX(0px)',
-    //         transition : 'all 2s',
-    //         zIndex : '100',  
-    //     });
-    // }
-    // if( ampScroll > ampOffset + 4400 ){
-    //     $(".mist1").animate({opacity : 1}, 1000);
-    //     $(".amp").animate({opacity : 0}, 1000);
-        
-    //     $(".amp_mist_bg").css({zIndex : 0});
-        
+    if ( ampScroll > 5550 ){
+        $(".mist_opa").css({
+            transform : 'translateY(0px)',
+            opacity : 1,
+            transition : 'all 0.4s'
+        });
+    }
 
-    // }
+    if ( ampScroll > 5850 ){
+        $(".mist_opa2").css({
+            transform : 'translateY(0px)',
+            opacity : 0.2,
+            transition : 'all 0.4s'
+        });
+        $(".mist > div:nth-child(1)").css({
+            transform : 'translate(-50%, -50%) scale(1.1)',
+            transition : 'all 0.3s',
+            opacity : 1
+        });
+    }
 
 });

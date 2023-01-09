@@ -792,6 +792,9 @@ body::-webkit-scrollbar {
 }
 
 /* 미스트 */
+.mist_opa {
+    opacity: 0;
+}
 .main_content .mist {
     position: sticky;
     top: 0;
@@ -808,8 +811,9 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 55%;
     left: 45%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.2);
     z-index: 1;
+    opacity: 0.3;
 }
 .main_content .mist > div:nth-child(2) {
     position: absolute;
@@ -897,6 +901,7 @@ body::-webkit-scrollbar {
     left: 8%;
     opacity: 0.2;
     font-family: 'Roboto Slab', serif;
+    opacity: 0;
 }
 .main_content .mist .content_box3 > span:nth-child(1) {
     font-size: 5.8vw;
