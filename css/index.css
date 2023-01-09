@@ -533,13 +533,18 @@ body::-webkit-scrollbar {
 .amp_opa {
     opacity: 0;
 }
-
+.trans {
+    transform: translateY(50px);
+}
+.trans2 {
+    transform: translateY(-50px);
+}
 .main_content {
     display: none;
 }
 .main_content .content_inner {
     position: relative;
-    height: 500vh;
+    height: 460vh;
     /* overflow: hidden; */
     background-color: #ea6852
 }
@@ -555,6 +560,7 @@ body::-webkit-scrollbar {
     margin: 0 auto;
     position: sticky;
     top: 10vw;
+    transform: rotate(-10deg);
 }
 .main_content .amp > div:first-child img {
     width: 100%;
@@ -588,6 +594,7 @@ body::-webkit-scrollbar {
     font-family: 'Roboto Slab', serif;
     font-size: 11.5vw;
     color: #fff;
+    
 }
 .main_content .amp .content_box {
     position: absolute;
@@ -773,16 +780,27 @@ body::-webkit-scrollbar {
     height: 0.67vw;
 }
 
+.amp_mist_bg {
+    background-color: #ede6d3;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -6;
+    opacity: 0;
+}
+
 /* 미스트 */
 .main_content .mist {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background-color: #ede6d3;
     opacity: 0;
-    z-index: -2;
+    z-index: 3;
 }
 .main_content .mist > div:nth-child(1) {
     width: 47.44vw;
