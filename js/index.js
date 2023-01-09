@@ -113,14 +113,24 @@ $(window).scroll(function(){
     }
 
     let start = ampScroll - 4300;
+    var opa= 1 - (start/1000);
     
     if( ampScroll > ampOffset + 4100 ){
-        $(".mist1").animate({zIndex : 10});
+        $(".mist1").css({zIndex : 3});
+        $(".amp").css({zIndex : 5});
     }
     if( ampScroll > 4300){    
-        $('.amp_mist_bg').css({ opacity : 1, transform: `translateX(${-start}px)`, zIndex : 12});
-        // $(".amp").animate({opacity : 0});
-        $(".mist1").animate({opacity : 1});
+        $('.amp_mist_bg').css({ 
+            opacity : 1,
+            transform: `translateX(${-start*1.2}px)`,
+            zIndex : 4,
+            position : 'sticky',
+            top : 0,
+            right : 0
+        });
+        $(".mist1").css({opacity : -opa + 0.5});
+        $(".amp").css({opacity : opa + 0.5 });
+       
         
     }
     // if(  ampScroll > ampOffset + 4300 ){
