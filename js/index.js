@@ -147,6 +147,8 @@ $(window).scroll(function(){
             top : 0,
             right : 0
         });
+        // $('.bbg >img').css({ 
+        //     transform: `translateX(${-start + 200 }px)`});
         $(".mist1").css({opacity : -opa + 0.5});
         $(".amp").css({opacity : opa + 0.5 });
     }
@@ -155,7 +157,7 @@ $(window).scroll(function(){
         $(".mist_opa").css({
             transform : 'translateY(0px)',
             opacity : 1,
-            transition : 'all 0.4s'
+            transition : 'all 0.35s'
         });
     }
 
