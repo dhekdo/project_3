@@ -544,7 +544,7 @@ body::-webkit-scrollbar {
 }
 .main_content .content_inner {
     position: relative;
-    height: 460vh;
+    height: 1000vh;
     /* overflow: hidden; */
     background-color: #ea6852
 }
@@ -783,7 +783,7 @@ body::-webkit-scrollbar {
 .amp_mist_bg {
     background-color: #ede6d3;
     position: sticky;
-    width: 100%;
+    width: 110%;
     height: 100vh;
     top: 0;
     left: 0;

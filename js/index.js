@@ -91,6 +91,7 @@ $(window).scroll(function(){
 
     let ampScroll = $(this).scrollTop();
     let ampOffset = $(".top").offset().top;
+    let ampBoxOffest = $(".amp").offset().top;
     
     if( ampScroll > ampOffset + 800 ){
         $(".amp > div:nth-child(2)").css({transform : 'translateY(0px)', opacity : 1, transition : 'all 2s'});
@@ -107,23 +108,43 @@ $(window).scroll(function(){
     }
     for( textureIndex = 0; textureIndex < 7; textureIndex++  ){
         if( ampScroll > ampOffset + ( 2000 + textureIndex * 300 )){
-            $(".texture_wrap img").eq(textureIndex).css({transform : 'translateY(0px)', opacity : 1, transition : 'all 1.5s'});;
+            $(".texture_wrap img").eq(textureIndex).css({transform : 'translateY(0px)', opacity : 1, transition : 'all 1.5s'});
         }
     }
 
-    if( ampScroll > ampOffset + 4300 ){
-        $(".amp_mist_bg").css({
-            transform : 'translateX(0px)',
-            opacity : 1,
-            transition : 'all 2s',
-            zIndex : '100',  
-        });
+    let start = ampScroll - 4300;
+    
+    if( ampScroll > ampOffset + 4100 ){
+        $(".mist1").animate({zIndex : 10});
     }
-    if( ampScroll > ampOffset + 4400 ){
-        $(".amp_mist_bg").animate({opacity : 0}, 1000);
-        $(".mist1").animate({opacity : 1}, 1000);
-        $(".amp").animate({opacity : 0}, 1000);
+    if( ampScroll > 4300){    
+        $('.amp_mist_bg').css({ opacity : 1, transform: `translateX(${-start}px)`, zIndex : 12});
+        // $(".amp").animate({opacity : 0});
+        $(".mist1").animate({opacity : 1});
+        
+    }
+    // if(  ampScroll > ampOffset + 4300 ){
+    //     $(".amp_mist_bg").css({position : 'fixed' , top : 0, opacity : 1, zIndex : 6});
+    //     $(".amp").animate({opacity : 0});
+    //     $(".mist").css({position : 'sticky', top : 0});
+    // }
+    
 
-    }
+    // if( ampScroll > ampOffset + 4300 ){
+    //     $(".amp_mist_bg").css({
+    //         opacity : 1,
+    //         transform : 'translateX(0px)',
+    //         transition : 'all 2s',
+    //         zIndex : '100',  
+    //     });
+    // }
+    // if( ampScroll > ampOffset + 4400 ){
+    //     $(".mist1").animate({opacity : 1}, 1000);
+    //     $(".amp").animate({opacity : 0}, 1000);
+        
+    //     $(".amp_mist_bg").css({zIndex : 0});
+        
+
+    // }
 
 });
