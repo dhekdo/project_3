@@ -7,8 +7,8 @@ $(".opening").show(function(){
 // 줄 잡아당기면 홈화면 전환
 $("#mainSwi").click(function(){
     $(".mainBg_off").fadeOut(2000);
-    $(".mainBg_on").show();
-    $(".main_content").show();
+    $(".mainBg_on, .main_content").show();
+    // $(".main_content").show();
     $("#mainSwi").css("cursor", "default");
 });
 
@@ -54,37 +54,14 @@ $(".projector").hover(function(){
 });
 
 // 시간 보이는 효과
-$(".books").hover(function(){
-    $(".time img:nth-child(4), .time span").stop().fadeIn();
-},function(){
-    $(".time img, .time span").stop().fadeOut();
-});
-$(".cart").hover(function(){
-    $(".time img:nth-child(3), .time span").stop().fadeIn();
-},function(){
-    $(".time img, .time span").stop().fadeOut();
-});
-$(".cup").hover(function(){
-    $(".time img:nth-child(2), .time span").stop().fadeIn();
-},function(){
-    $(".time img, .time span").stop().fadeOut();
-});
-$(".frame").hover(function(){
-    $(".time img:nth-child(1), .time span").stop().fadeIn();
-},function(){
-    $(".time img, .time span").stop().fadeOut();
-});
-$(".tennis").hover(function(){
-    $(".time img:nth-child(5), .time span").stop().fadeIn();
-},function(){
-    $(".time img, .time span").stop().fadeOut();
-});
-$(".turntables").hover(function(){
-    $(".time img:nth-child(6), .time span").stop().fadeIn();
-},function(){
-    $(".time img, .time span").stop().fadeOut();
-});
+$(".main_hover").hover(function(){
+    let bgIndex =  $(this).index();
 
+    $(".time > img").eq(bgIndex-1).stop().fadeIn();
+    $(".time span").stop().fadeIn();
+}, function(){
+    $(".time span, .time > img").stop().fadeOut();
+});
 
 // 스크롤 이벤트
 $(window).scroll(function(){
@@ -93,6 +70,7 @@ $(window).scroll(function(){
     let ampOffset = $(".top").offset().top;
     let ampBoxOffest = $(".amp").offset().top;
     
+    // 상단제목
     if( ampScroll > ampOffset + 800 ){
         $(".amp > div:nth-child(2)")
         .css({
@@ -100,11 +78,23 @@ $(window).scroll(function(){
             opacity : 1,
             transition : 'all 2s'
         });
-        
+    }else if ( ampScroll < ampOffset + 800 ){
+        $(".amp > div:nth-child(2)")
+        .css({
+            transform : 'translateY(50px)',
+            opacity : 0,
+            transition : 'all 1s'
+        });
     }
+    // 앰플 케이스 이미지
     if( ampScroll > ampOffset + 1000 ){
         $(".amp_img_box").animate({opacity : 1}, 1000);
     }
+     else if( ampScroll < ampOffset + 700 ){
+        $(".amp_img_box").animate({opacity : 0});
+    }
+
+    // 컨텐츠박스
     if( ampScroll > ampOffset + 1400 ){
         $(".amp >div:nth-child(3)")
         .css({
@@ -112,14 +102,31 @@ $(window).scroll(function(){
             opacity : 1,
             transition : 'all 2s'
         });
+    }else if( ampScroll < ampOffset + 1400 ){
+        $(".amp >div:nth-child(3)")
+        .css({
+            transform : 'translateY(50px)',
+            opacity : 0,
+            transition : 'all 1s'
+        });
     }
+
+    // 물방울 배경 이미지
     if( ampScroll > ampOffset + 1700 ){
         $(".amp1").css({
             transform : 'rotate(0deg)',
             opacity : 1,
             transition : 'all 2s'
         });
+    }else if( ampScroll < ampOffset + 1700 ){
+        $(".amp1").css({
+            transform : 'rotate(-10deg)',
+            opacity : 0,
+            transition : 'all 1s'
+        });
     }
+
+    // 텍스쳐 이미지
     for( textureIndex = 0; textureIndex < 7; textureIndex++  ){
         if( ampScroll > ampOffset + ( 2000 + textureIndex * 300 )){
             $(".texture_wrap img").eq(textureIndex)
@@ -128,8 +135,17 @@ $(window).scroll(function(){
                 opacity : 1,
                 transition : 'all 1.5s'
             });
+        }else if( ampScroll < ampOffset + ( 2000 + textureIndex * 300 ) ){
+            $(".texture_wrap img").eq(textureIndex)
+            .css({
+                transform : 'translateY(-50px)',
+                opacity : 0,
+                transition : 'all 0.5s'
+            });
         }
     }
+
+
 
     let start = ampScroll - 4300;
     var opa= 1 - (start/1000);
@@ -147,13 +163,27 @@ $(window).scroll(function(){
             top : 0,
             right : 0
         });
-        // $('.bbg >img').css({ 
-        //     transform: `translateX(${-start + 200 }px)`});
         $(".mist1").css({opacity : -opa + 0.5});
-        $(".amp").css({opacity : opa + 0.5 });
+        $(".amp").css({opacity : opa + 0.1 });
+        $(".bbg img").css({
+            transform: `translate3d(${-start/15}%, 0px, 0px)`
+        });
+        $(".bbg span").css({
+            transform: `translate3d(${-start/5}%, 0px, 0px)`
+        });
+    }
+    if( ampScroll > 5000 ){
+        let start = ampScroll - 5100;
+        $(".bbg2 img").css({
+            transform: `translate3d(${-start/20}%, 0px, 0px)`
+        });
+        $(".bbg2 span").css({
+            transform: `translate3d(${-start+750}%, 0px, 0px)`
+        });
     }
 
     if ( ampScroll > 5550 ){
+        
         $(".mist_opa").css({
             transform : 'translateY(0px)',
             opacity : 1,
@@ -162,16 +192,24 @@ $(window).scroll(function(){
     }
 
     if ( ampScroll > 5850 ){
+        
         $(".mist_opa2").css({
             transform : 'translateY(0px)',
             opacity : 0.2,
             transition : 'all 0.4s'
+        });
+        $(".bbg2 img").css({
+            transform: `translate(0px, 0px)`
+        });
+        $(".bbg2 span").css({
+            transform: `translate(5px, 0px)`
         });
         $(".mist > div:nth-child(1)").css({
             transform : 'translate(-50%, -50%) scale(1.1)',
             transition : 'all 0.3s',
             opacity : 1
         });
+        
     }
 
 });
