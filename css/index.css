@@ -391,6 +391,7 @@ body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%,-50%);
     background-image: url(../img/bg-main-pop2.png);
+    background-size: cover;
     width: 25.4vw;
     height: 34.2vw;
     z-index: 7;
@@ -400,6 +401,7 @@ body::-webkit-scrollbar {
     bottom: 2.5vw;
     right: -3vw;
     background-image: url(../img/btn-landing.png);
+    background-size: cover;
     display: inline-block;
     width: 20.3vw;
     padding-top: 7.3vw;
@@ -430,10 +432,11 @@ body::-webkit-scrollbar {
 }
 .pop_up_box > .btn_cl {
     background-image: url(../img/btn-close-pop.png);
+    background-size: cover;
     width: 1vw;
     padding-top: 1vw;
     position: absolute;
-    bottom: 0.5vw;
+    bottom: 1vw;
     right: 1vw;
     border: none;
     outline: none;
