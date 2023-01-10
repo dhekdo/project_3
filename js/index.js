@@ -63,6 +63,11 @@ $(".main_hover").hover(function(){
     $(".time span, .time > img").stop().fadeOut();
 });
 
+// 팝업 이벤트
+$(".btn_cl").click(function(){
+    $(".pop_up_box").css({display : 'none'});
+});
+
 // 스크롤 이벤트
 $(window).scroll(function(){
 
@@ -232,5 +237,6 @@ $(window).scroll(function(){
             opacity : 0
         });
     }
-
 });
+
+
