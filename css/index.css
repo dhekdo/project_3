@@ -544,7 +544,7 @@ body::-webkit-scrollbar {
 }
 .main_content .content_inner {
     position: relative;
-    height: 1000vh;
+    height: 720vh;
     /* overflow: hidden; */
     background-color: #ea6852
 }

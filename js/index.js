@@ -70,7 +70,7 @@ $(window).scroll(function(){
     let ampOffset = $(".top").offset().top;
     let ampBoxOffest = $(".amp").offset().top;
     
-    // 상단제목
+    // 앰플 상단 제목
     if( ampScroll > ampOffset + 800 ){
         $(".amp > div:nth-child(2)")
         .css({
@@ -88,13 +88,17 @@ $(window).scroll(function(){
     }
     // 앰플 케이스 이미지
     if( ampScroll > ampOffset + 1000 ){
-        $(".amp_img_box").animate({opacity : 1}, 1000);
+        $(".amp_img_box").css({
+            opacity : 1,
+            transition : 'all 2s'});
     }
-     else if( ampScroll < ampOffset + 700 ){
-        $(".amp_img_box").animate({opacity : 0});
+     else if( ampScroll < ampOffset + 1000 ){
+        $(".amp_img_box").css({
+            opacity : 0,
+            transition : 'all 0.5s'});
     }
 
-    // 컨텐츠박스
+    // 앰플 컨텐츠 박스
     if( ampScroll > ampOffset + 1400 ){
         $(".amp >div:nth-child(3)")
         .css({
@@ -111,7 +115,7 @@ $(window).scroll(function(){
         });
     }
 
-    // 물방울 배경 이미지
+    // 앰플 물방울 배경 이미지
     if( ampScroll > ampOffset + 1700 ){
         $(".amp1").css({
             transform : 'rotate(0deg)',
@@ -126,7 +130,7 @@ $(window).scroll(function(){
         });
     }
 
-    // 텍스쳐 이미지
+    // 앰플 텍스쳐 이미지
     for( textureIndex = 0; textureIndex < 7; textureIndex++  ){
         if( ampScroll > ampOffset + ( 2000 + textureIndex * 300 )){
             $(".texture_wrap img").eq(textureIndex)
@@ -144,9 +148,6 @@ $(window).scroll(function(){
             });
         }
     }
-
-
-
     let start = ampScroll - 4300;
     var opa= 1 - (start/1000);
     
@@ -154,6 +155,7 @@ $(window).scroll(function(){
         $(".mist1").css({zIndex : 3});
         $(".amp").css({zIndex : 5});
     }
+
     if( ampScroll > 4300){    
         $('.amp_mist_bg').css({ 
             opacity : 1,
@@ -172,6 +174,7 @@ $(window).scroll(function(){
             transform: `translate3d(${-start/5}%, 0px, 0px)`
         });
     }
+
     if( ampScroll > 5000 ){
         let start = ampScroll - 5100;
         $(".bbg2 img").css({
@@ -182,6 +185,7 @@ $(window).scroll(function(){
         });
     }
 
+    // 미스트 컨텐츠 박스
     if ( ampScroll > 5550 ){
         
         $(".mist_opa").css({
@@ -189,8 +193,20 @@ $(window).scroll(function(){
             opacity : 1,
             transition : 'all 0.35s'
         });
+    }else if( ampScroll < 5580 ){
+        $(".mist_opa2").css({
+            transform : 'translateY(50px)',
+            opacity : 0,
+            transition : 'all 0.1s'
+        });
+        $(".mist_opa").css({
+            transform : 'translateY(50px)',
+            opacity : 0,
+            transition : 'all 0.5s'
+        });
     }
 
+    // 미스트 케이스 이미지, 배경 이미지
     if ( ampScroll > 5850 ){
         
         $(".mist_opa2").css({
@@ -209,7 +225,12 @@ $(window).scroll(function(){
             transition : 'all 0.3s',
             opacity : 1
         });
-        
+    }else if ( ampScroll < 5300 ){
+        $(".mist > div:nth-child(1)").css({
+            transform : 'translate(-50%, -50%) scale(1)',
+            transition : 'all 0.15s',
+            opacity : 0
+        });
     }
 
 });
