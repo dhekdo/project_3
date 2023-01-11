@@ -1231,14 +1231,14 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     background-color: #a0a7bc;
 }
-.content_box4 .m_circle4 {
+.content_box4_text .m_circle4 {
     position: absolute;
     top: 27.3vw;
     right: 17.81vw;
     animation: mi_item_up2 3s linear infinite alternate;
     opacity: 1;
 }
-.content_box4 .m_circle4 span {
+.content_box4_text .m_circle4 span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1253,14 +1253,14 @@ body::-webkit-scrollbar {
     line-height: 1;
     font-family: 'Roboto Slab', serif;
 }
-.content_box4 .m_circle5 {
+.content_box4_text .m_circle5 {
     position: absolute;
     top: 12.03vw;
     left: 19.94vw;
     animation: mi_item_up2 3.1s linear infinite alternate;
     opacity: 1;
 }
-.content_box4 .m_circle5 span {
+.content_box4_text .m_circle5 span {
     display: flex;
     justify-content: center;
     align-items: center;

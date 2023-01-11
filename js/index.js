@@ -240,18 +240,19 @@ $(window).scroll(function(){
 
     // 마이크로바이옴 움직이는 선
     if( ampScroll > 7600 ){
+        $(".content_box4").css({opacity : 1});
         $(".ball1").delay(100).animate({opacity : 1}, 600);
-        $(".ball2").delay(200).animate({opacity : 1}, 600);
-        $(".ball3").animate({opacity : 1}, 500);
-        $(".star1").delay(400).animate({opacity : 1}, 600);
-        $(".star2").delay(300).animate({opacity : 1}, 600);
-        $(".m_circle1").delay(500).animate({opacity : 1}, 600);
-        $(".m_circle2").delay(600).animate({opacity : 1}, 600);
-        $(".m_circle3").delay(700).animate({opacity : 1}, 600);
+        $(".ball2").animate({opacity : 1}, 300);
+        $(".ball3").delay(200).animate({opacity : 1}, 500);
+        $(".star1").delay(600).animate({opacity : 1}, 600);
+        $(".star2").delay(500).animate({opacity : 1}, 600);
+        $(".m_circle1").delay(700).animate({opacity : 1}, 600);
+        $(".m_circle2").delay(900).animate({opacity : 1}, 600);
+        $(".m_circle3").delay(1000).animate({opacity : 1}, 600);
     } 
-    // else if ( ampScroll < 7600 ){
-    //     $(".content_box4").animate({opacity : 0});
-    // }
+    else if ( ampScroll < 7600 ){
+        $(".content_box4").css({opacity : 0, transition : 'all 2s'});
+    }
 
     
 
