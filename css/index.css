@@ -30,12 +30,70 @@ ul, ol, li {
 }
 
 
-/* 상단 */
+/* 팝업 */
+.pop_up_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(../img/bg-main-pop2.png);
+    background-size: cover;
+    width: 25.4vw;
+    height: 34.2vw;
+    z-index: 7;
+}
+.pop_up_box > a {
+    position: absolute;
+    bottom: 2.5vw;
+    right: -3vw;
+    background-image: url(../img/btn-landing.png);
+    background-size: cover;
+    display: inline-block;
+    width: 20.3vw;
+    padding-top: 7.3vw;
+}
+.pop_up_box > .btn_ch {
+    background-image: url(../img/icon-check.png);
+    width: 15vw;
+    position: absolute;
+    bottom: 0.5vw;
+    left: 1.5vw;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    flex-wrap: nowrap;
+    padding-right: 1vw;
+    transform: rotate(-0.5deg);
+}
+.pop_up_box > .btn_ch::before{
+    content: "오늘 하루 그만보기";
+    font-weight: 600;
+    color: #2a2a2a;
+    margin-left: 1.1vw;
+    opacity: 0.8;
+}
+.pop_up_box > .btn_cl {
+    background-image: url(../img/btn-close-pop.png);
+    background-size: cover;
+    width: 1vw;
+    padding-top: 1vw;
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
 
+/* 상단 */
 .top {
     width: 100%;
     background-color: #ea6852;
-
 }
 body::-webkit-scrollbar {
     display: none;
@@ -384,65 +442,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* 팝업 */
-.pop_up_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-image: url(../img/bg-main-pop2.png);
-    background-size: cover;
-    width: 25.4vw;
-    height: 34.2vw;
-    z-index: 7;
-}
-.pop_up_box > a {
-    position: absolute;
-    bottom: 2.5vw;
-    right: -3vw;
-    background-image: url(../img/btn-landing.png);
-    background-size: cover;
-    display: inline-block;
-    width: 20.3vw;
-    padding-top: 7.3vw;
-}
-.pop_up_box > .btn_ch {
-    background-image: url(../img/icon-check.png);
-    width: 15vw;
-    position: absolute;
-    bottom: 0.5vw;
-    left: 1.5vw;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background-repeat: no-repeat;
-    flex-wrap: nowrap;
-    padding-right: 1vw;
-    transform: rotate(-0.5deg);
-}
-.pop_up_box > .btn_ch::before{
-    content: "오늘 하루 그만보기";
-    font-weight: 600;
-    color: #2a2a2a;
-    margin-left: 1.1vw;
-    opacity: 0.8;
-}
-.pop_up_box > .btn_cl {
-    background-image: url(../img/btn-close-pop.png);
-    background-size: cover;
-    width: 1vw;
-    padding-top: 1vw;
-    position: absolute;
-    bottom: 1vw;
-    right: 1vw;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    cursor: pointer;
-}
+
 
 /* 스크롤 아이콘 */
 .scroll_icon {
