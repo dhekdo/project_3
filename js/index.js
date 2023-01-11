@@ -237,6 +237,25 @@ $(window).scroll(function(){
             opacity : 0
         });
     }
+
+    // 마이크로바이옴 움직이는 선
+    if( ampScroll > 7600 ){
+        $(".ball1").delay(100).animate({opacity : 1}, 600);
+        $(".ball2").delay(200).animate({opacity : 1}, 600);
+        $(".ball3").animate({opacity : 1}, 500);
+        $(".star1").delay(400).animate({opacity : 1}, 600);
+        $(".star2").delay(300).animate({opacity : 1}, 600);
+        $(".m_circle1").delay(500).animate({opacity : 1}, 600);
+        $(".m_circle2").delay(600).animate({opacity : 1}, 600);
+        $(".m_circle3").delay(700).animate({opacity : 1}, 600);
+    } 
+    // else if ( ampScroll < 7600 ){
+    //     $(".content_box4").animate({opacity : 0});
+    // }
+
+    
+
 });
 
 
+    

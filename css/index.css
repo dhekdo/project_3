@@ -1125,9 +1125,11 @@ body::-webkit-scrollbar {
 }
 .mi_item {
     animation: mi_item_up 5s ease-out infinite alternate;
+    opacity: 0;
 }
 .mi_item2 {
     animation: mi_item_up2 2s ease-in-out infinite alternate;
+    opacity: 0;
 }
 .content_box4 .ball1 {
     position: absolute;
@@ -1234,6 +1236,7 @@ body::-webkit-scrollbar {
     top: 27.3vw;
     right: 17.81vw;
     animation: mi_item_up2 3s linear infinite alternate;
+    opacity: 1;
 }
 .content_box4 .m_circle4 span {
     display: flex;
@@ -1255,6 +1258,7 @@ body::-webkit-scrollbar {
     top: 12.03vw;
     left: 19.94vw;
     animation: mi_item_up2 3.1s linear infinite alternate;
+    opacity: 1;
 }
 .content_box4 .m_circle5 span {
     display: flex;
