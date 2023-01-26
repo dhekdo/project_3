@@ -95,9 +95,9 @@ ul, ol, li {
     width: 100%;
     background-color: #ea6852;
 }
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-} */
+}
 .top header {
     width: 100%;
     position: absolute;
