@@ -136,7 +136,7 @@ $(window).scroll(function(){
     }
 
     // 앰플 텍스쳐 이미지
-    for( textureIndex = 0; textureIndex < 7; textureIndex++  ){
+    for( textureIndex = 0; textureIndex < 7; textureIndex++ ){
         if( ampScroll > ampOffset + ( 2000 + textureIndex * 300 )){
             $(".texture_wrap img").eq(textureIndex)
             .css({
@@ -238,8 +238,8 @@ $(window).scroll(function(){
         });
     }
 
-    // 마이크로바이옴 움직이는 선
-    if( ampScroll > 7600 ){
+    // 마이크로바이옴 구좌
+    if( ampScroll > 8000 ){
         $(".content_box4").css({opacity : 1});
         $(".ball1").delay(100).animate({opacity : 1}, 600);
         $(".ball2").animate({opacity : 1}, 300);
@@ -250,25 +250,101 @@ $(window).scroll(function(){
         $(".m_circle2").delay(900).animate({opacity : 1}, 600);
         $(".m_circle3").delay(1000).animate({opacity : 1}, 600);
     } 
-    else if ( ampScroll < 7600 ){
+    else if ( ampScroll < 8000 ){
         $(".content_box4").css({opacity : 0, transition : 'all 2s'});
     }
 
-    if( ampScroll > 7900 ){
+    if( ampScroll > 8300 ){
         $(".content_box5 .con5_title").css({
             opacity : 1,
             transition : "all 1.5s"
         });
-    }
-    if( ampScroll > 8100 ){
+    } else if( ampScroll < 8300 ){
         $(".content_box5 .con5_title").css({
-            transform: "translateY(-180px)",
-        }).children().css({
-            'font-size' : '1.5vw'
+            opacity : 0,
+            transition : "all 1.5s"
+        });
+    }
+    if( ampScroll > 9000 ){
+        $(".content_box5 .con5_title").css({
+            transform : 'translate(0px, -250%) scale(0.3, 0.3)',
+            transition : 'all 0.8s'
+        }).children("span:nth-child(1)").css({
+            transform : 'translate(0px, -330%) scale(2, 2)',
+            transition : 'all 0.8s'
+        }).end().find("span:nth-child(3)").css({
+            opacity : '1',
+            transition : 'all 1.2s'
+        })
+    } else if( ampScroll < 9000 ){
+        $(".content_box5 .con5_title").css({
+            transform : 'translate(0px, -50%)',
+            transition : 'all 1.2s'
+        }).children("span:nth-child(1)").css({
+            transform : 'translate(0px, -50%)',
+            transition : 'all 1.2s'
+        }).end().find("span:nth-child(3)").css({
+            opacity : '0',
+            transition : 'all 0.5s'
         })
     }
-    
 
+    // 마이크로바이옴 텍스트 박스
+    for( textBox = 0; textBox < 3; textBox++ ){
+        if( ampScroll > ampOffset + ( 9700 + textBox * 200 ) ){
+            $(".content_box5 .con5_text1 span").eq(textBox).css({
+                opacity : '1',
+                transition : 'all 0.3s',
+                transform : 'translate(0px, -10px)'
+            });
+        } else if( ampScroll < ampOffset + ( 9700 + textBox * 200 ) ){
+            $(".content_box5 .con5_text1 span").eq(textBox).css({
+                opacity : '0',
+                transition : 'all 0.3s',
+                transform : 'translate(0px, 0px)'
+            });
+        }
+    }
+    if( ampScroll > 11200 ){
+        $(".content_box5 .con5_text1 span").css({
+            opacity : 0,
+            transition : 'all 0.5s'
+        });
+    }
+    for( textBox2 = 0; textBox2 < 4; textBox2++ ){
+        if( ampScroll > ampOffset + ( 11400 + textBox2 * 200 )){
+            
+            $(".content_box5 .con5_text2 span").eq(textBox2).css({
+                opacity : '1',
+                transition : 'all 0.3s',
+                transform : 'translate(0px, -10px)'
+            });
+            $(".content_box5 .con5_text2 a").css({
+                opacity : '1',
+                transition : 'all 0.3s',
+                transform : 'translate(0px, -10px)'
+            })
+        } else if( ampScroll < ampOffset + ( 11400 + textBox2 * 200 ) ){
+            $(".content_box5 .con5_text2 span").eq(textBox2).css({
+                opacity : '0',
+                transition : 'all 0.3s',
+                transform : 'translate(0px, 0px)'
+            });
+            $(".content_box5 .con5_text2 a").css({
+                opacity : '0',
+                transition : 'all 0.3s',
+                transform : 'translate(0px, 0px)'
+            })
+            $(".content_box5 .con5_text1").css({
+                opacity : 1,
+                transition : 'all 1s'
+            })
+
+    
+            
+        }
+    }
+        
 });
 
 

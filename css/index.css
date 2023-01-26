@@ -1071,7 +1071,7 @@ ul, ol, li {
 /* 마이크로바이옴 */
 .content_inner2 {
     width: 100%;
-    height: 500vh;
+    height: 530vh;
     position: relative;
 }
 .content_inner2 .micro_wrap {
@@ -1290,10 +1290,98 @@ ul, ol, li {
     font-size: 1.562vw;
     font-weight: 400;
     line-height: 0.5;
+    display: block;
 }
 .content_box5 .con5_title span:nth-child(2) {
     font-family: 'SeoulHangang';
     font-size: 5.208vw;
     font-weight: 400;
     line-height: 1;
+}
+.content_box5 .con5_title span:nth-child(3) {
+    border-radius: 50%;
+    background-color: #eb4124;
+    width: 1.05vw;
+    height: 1.05vw;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+}
+.content_box5 .con5_text1, .con5_text2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content_box5 .con5_text1 span {
+    display: block;
+    font-size: 3.22vw;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+    color: #2a2a2a;
+    opacity: 0;
+}
+.content_box5 .con5_text1 strong {
+    font-size: 3.22vw;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+    color: #2a2a2a;
+}
+.content_box5 .con5_text1 span:nth-child(3) {
+    font-family: 'SeoulHangang';
+    color: #eb4124;
+    font-weight: 500;
+}
+.content_box5 .con5_text2 span {
+    display: block;
+    font-size: 3.22vw;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+    color: #2a2a2a;
+    opacity: 0;
+}
+
+.content_box5 .con5_text2 strong {
+    font-size: 3.22vw;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+    color: #2a2a2a;
+}
+.content_box5 .con5_text2 span.small_text {
+    font-size: 29px;
+}
+.content_box5 .con5_text2 strong.co {
+    font-family: 'SeoulHangang';
+    color: #eb4124;
+}
+.content_box5 .con5_text2 a {
+    opacity: 0;
+    color: #2a2a2a;
+    font-size: 0.88vw;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_box5 .con5_text2 a > span {
+    border: 1px solid #2a2a2a;
+    width: 1.35vw;
+    height: 1.35vw;
+    border-radius: 100%;
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.3vw;
+}
+.content_box5 .con5_text2 a > span:after {
+    content: "";
+    background: url(../img/prod-arrow2.svg) 50% 0 no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    width: 16px;
+    height: 12px;
 }
