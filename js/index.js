@@ -254,6 +254,19 @@ $(window).scroll(function(){
         $(".content_box4").css({opacity : 0, transition : 'all 2s'});
     }
 
+    if( ampScroll > 7900 ){
+        $(".content_box5 .con5_title").css({
+            opacity : 1,
+            transition : "all 1.5s"
+        });
+    }
+    if( ampScroll > 8100 ){
+        $(".content_box5 .con5_title").css({
+            transform: "translateY(-180px)",
+        }).children().css({
+            'font-size' : '1.5vw'
+        })
+    }
     
 
 });

@@ -95,9 +95,9 @@ ul, ol, li {
     width: 100%;
     background-color: #ea6852;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 .top header {
     width: 100%;
     position: absolute;
@@ -1273,4 +1273,27 @@ body::-webkit-scrollbar {
     font-weight: 400;
     line-height: 1;
     font-family: 'Roboto Slab', serif;
+}
+.content_box5 {
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content_box5 .con5_title {
+    text-align: center;
+    opacity: 0;
+}
+.content_box5 .con5_title span:first-child {
+    font-family: 'Comfortaa';
+    font-size: 1.562vw;
+    font-weight: 400;
+    line-height: 0.5;
+}
+.content_box5 .con5_title span:nth-child(2) {
+    font-family: 'SeoulHangang';
+    font-size: 5.208vw;
+    font-weight: 400;
+    line-height: 1;
 }
