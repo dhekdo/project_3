@@ -344,8 +344,16 @@ $(window).scroll(function(){
             
         }
     }
+
+    if( ampScroll > 13200 ){
+        $(".content_inner3").css({
+            display : 'block'
+        })
+    }
         
 });
 
-
-    
+// 스크롤 탑 버튼
+function topBt(){
+    window.scrollTo(0, 0)
+}
