@@ -353,6 +353,20 @@ $(window).scroll(function(){
         
 });
 
+// 푸터 슬라이드
+$('.swiper').each(function(i) {
+    let swiper = new Swiper($(this), {
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      speed: 2000,
+      loop: true,
+      loopAdditionalSlides: 1,
+      slidesPerView: 5,
+    });
+  });
+
 // 스크롤 탑 버튼
 function topBt(){
     window.scrollTo(0, 0)
