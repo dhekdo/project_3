@@ -370,9 +370,10 @@ window.onload = function () {
         });
     });
 
-    // 스크롤 탑 버튼
-    function topBt() {
-        window.scrollTo(0, 0)
-    }
+}
+
+// 스크롤 탑 버튼
+function topBt() {
+    window.scrollTo(0, 0)
 }
 
