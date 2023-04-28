@@ -1481,30 +1481,27 @@ footer .roll_slide .roll_wrap {
 footer .roll_slide .roll_wrap ul {
     display: flex;
     margin-right: 30px;
-    width: 100%;
+    width: 500%;
     height: 100%;
     align-items: center;
     color: #fff;
+    animation: rolling 10s linear infinite;
 }
-footer .roll_slide .roll_wrap ul .icon_wrap {
-    display: flex;
-    margin-right: 50px;
-}
-footer .roll_slide .roll_wrap ul .roll_text {
-    font-size: 0.83vw;
-    font-weight: 400;
-    margin-right: 50px;
-}
-footer .roll_slide .roll_wrap .star_icon > .icon {
-    background-image: url(../img/icon-star.svg);
-    display: inline-block;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    width: 0.729vw;
-    height: 0.62vw;
+
+footer .roll_slide .roll_wrap ul li {
     margin-right: 10px;
 }
+
+@keyframes rolling {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-5%);
+    }
+  }
+
 footer .roll_slide .roll_wrap .smile_icon > .icon {
     width: 1.3vw;
     height: 1.25vw;
